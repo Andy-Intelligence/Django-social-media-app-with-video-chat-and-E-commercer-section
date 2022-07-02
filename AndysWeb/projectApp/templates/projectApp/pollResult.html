@@ -1,0 +1,23 @@
+
+<div class = "container">
+<h3><strong>Results</strong></h3>
+
+<h4>{{question.question}}</h4>
+
+<form method = "post" action = "{% url 'pollResult' question.id %}">
+    {% csrf_token %}
+    {% for  option in options %}
+    <ul class = ''>
+        <label>
+            <li class = ''>
+                <input class = '' type = 'radio' name = 'choice' value = '{{option.id}}' aria-label="...">
+                {{option.option}}
+                <span class = "">{{option.vote}}%</span>
+            </li>
+        </label>
+        {% endfor %}
+    </ul>
+    <input type = "submit" value = "Submit" class = 'btn btn-primary'>
+</form>
+
+</div>

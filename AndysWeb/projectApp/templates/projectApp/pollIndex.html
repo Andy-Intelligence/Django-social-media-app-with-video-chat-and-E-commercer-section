@@ -1,0 +1,7 @@
+<h3><strong>Polls Section</strong></h3>
+
+<div>
+    {% for question in questions %}
+    <a href = "{% url 'pollVote' question.id %}" class = ""><h5>{{question.question}}</h5></a>
+    {% endfor %}
+</div>

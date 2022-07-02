@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+    document.write("we are live")
+
+
+    function names(name1, name2, name3){
+        
+        console.log("my name is " + " " + name1)
+        console.log("my name is " + " " + name2)
+        console.log("my name is " + " " + name3)
+    }
+
+    names("kayyu", "imiboy", "andyboy")
+
+
+
+    // this is a program to convert from mm to cm....given 100mm = 1cm
+
+
+    const digit1 = 100
+    const digit2 = 23
+
+    
+
+    function conversion_mm_cm(value){
+        const Value = value / 100;
+        return console.log("The conversion in cm is" + " " + Value + "cm")
+
+
+    }
+
+    const ans = conversion_mm_cm(digit1)
+    const ans2 = conversion_mm_cm(digit2)
+    const myArr = [digit1,digit2]
+
+    console.log(myArr)
+
+
+    // in this program i want to make use of function expressions so i can call or use it like annonymous function
+
+     let int1 = 1
+     let int2 = 4
+
+     function add(add1,add2){
+        return add1 + add2
+     }
+
+     const total = function add(int1,int2){
+
+        let v1 = int1
+        let v2 = int2
+        sum = v1 + v2
+
+        return sum
+     }
+
+     total(3,3);
+
+     myArr1 = [total(3,3)]
+
+     console.log(myArr1)
+
+     let sum1 = add(5,5);
+     let sum2 = add(5,7);
+     let sum3 = total(2,3);
+
+     myArr2 = [sum1,sum2,sum3,total(1,1)]
+
+     console.log('This are the value of myArr2' + " " + myArr2)
+
+
+    //  this is a code to practie objects with thier keys and values, the object here will be "person" no offence
+    // name,lastname,age,education,married,siblings,and  a function
+
+    let person = {
+        name:"Andidiong",
+        lastname:"Usoro",
+        age:22,
+        education:true,
+        married:false,
+        siblings:['kayyu','imiboy','andiboy','enomfon'],
+        greetings: function helloFam(){
+            console.log("hello" + " " + person.siblings[0])
+            console.log("hello" + " " + person.siblings)
+        }
+
+    }
+
+
+    person.greetings();
+    console.log(person.name)
+
+
+    // okay lets take a look at if and else statements
+
+
+    const age = 18;
+    const allow = false;
+
+    if (age>18){
+
+        console.log("you are allowed entrance into this club")
+
+    }
+    else{
+        console.log("guest access denied please wait while we verify your details")
+    }
+    
+    // lets play with if, else if, else statements
+
+    const num1 = 2;
+    const num2 = 3;
+    const num3 = 2;
+    const result = num1 >= num3;
+    
+    
+    if (num1>num3){
+        console.log('num1 is greater than num3')
+    }
+
+    else if(num2>num3){
+            console.log('viola we did it')
+    }
+    else if(result){
+        console.log("the both num1 and num2 is equivalent")
+
+    }
+
+    
+
+    else{
+        console.log('i think there was an error in the program')
+    }
+
+
+// lets work with not 
+
+let value = true
+
+if(!value){
+    console.log("it worked")
+}
+
+
+// now we are going to be working with the switch statements
+
+let andy = 3;
+
+switch(andy){
+    case 1:
+        console.log("Andy is 1");
+        break;
+    case 2:
+        console.log("Andy is 2");
+        break;
+    case 3:
+        console.log("Andy is 3");
+        break;
+    default:
+        console.log("Okay i don't know how old Andy is")
+    
+}
+
+// a script to work on the while loop
+let dollar = 10;
+
+while(dollar>0){
+
+console.log("hello i am going to the mall and i still have" + " " + dollar + " left in my pocket");
+dollar = dollar - 1
+
+}
+
+
+// lets work with do while syntax
+
+let amount = 12
+
+do{
+    console.log("I have " + amount + "dollars");
+    amount--
+}while(amount>0)
+
+
+
+
+let john;
+
+for (john = 0;john<=10;john++) {
+    console.log(`hello i'm john and i'm ${john} years old`);
+};
+
+
+
+let text = "hello peter smith"
+
+const eminus = {
+    name:"eminus",
+    greeting(){
+        console.log("hello i am eminus")
+    }
+    
+}
+
+
+eminus.greeting()
+console.log(eminus)
+console.log(eminus.name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let lang = " Andidiong Usoro";
+let langlen = lang.length;
+
+console.log(lang.toUpperCase())
+console.log(lang.toLowerCase())
+console.log(lang.charAt(0))
+console.log(lang.charAt(lang.length - 1))
+console.log(lang.indexOf("A"))
+console.log(lang.trim())
+console.log(lang.trim().toLowerCase().startsWith('andi'))
+console.log(lang.includes('oro'))
+console.log(lang.slice(0,12))
+console.log(lang.slice(-3))
+
+
+
+
+
+
+let named = ['babyco','kayyu','imiboy','andiboy','enomfon']
+
+
+console.log(named.length);
+console.log(named[named.length-1]);
+
+// to concat an array
+
+const lastnames = ['nifms','csmkj','zbxjm','dasd',' fkanc']
+
+const allnames = named.concat(lastnames);
+console.log(allnames);
+// reverse all names
+
+console.log(named.reverse())
+
+
+// unshift..to add to the begininig of an array
+
+named.unshift('child0')
+console.log(named)
+
+// shift to remove the first element of an array
+
+named.shift('child0')
+console.log(named)
+
+
+// push...to put an element to the end of the array
+
+named.push("hello")
+console.log(named)
+
+
+
+
+
+
+// pop ...to remove element from the end of the array
+named.pop("hello")
+console.log(named)
+
+
+
+// splice...but it mutates the original array
+const specificnames = allnames.splice(2,1);
+console.log(specificnames)
+console.log(allnames)
+
+
+
+
+
+
+
+const A = ['anna','suzy','bob'];
+const B = 'shakeandbake';
+let AB = [];
+
+
+
+for(let i = 0;i<A.length;i++){
+    AB.push(A[i]+B)
+    
+    
+}
+
+console.log(AB)
+
+
+
+
+
+
+
+
+let movieprice = [150,200,250,300]
+let fuelprice = [70,85,90,230]
+
+
+function pricehistorytotal(pricehistory){
+    let total = 0
+    for(let i =0;i<pricehistory.length;i++){
+        total += pricehistory[i]
+    }
+    console.log(total)
+
+    if(total>100){
+        console.log("heyy you are spending way too much")
+        return total;
+    }else{
+        console.log("you are not spending too much you are good to go")
+        return total;
+    }
+
+}
+
+
+
+
+
+const eminuswants = pricehistorytotal(movieprice);
+const kayyuwants = pricehistorytotal(fuelprice);
+const andywants = pricehistorytotal([1,2,3,4,5,6]);
+
+
+console.log({
+    movieprice:eminuswants,
+    fuelprice:kayyuwants,
+    r:andywants
+});
+
+
+
+
+
+function func1(senior){
+    return (`good morning  ${senior.toUpperCase()}`)
+}
+
+
+function func(junior){
+    return `this is another function ${junior.repeat(3)}`
+}
+
+
+
+function func2(name,cb){
+    const anyone = "Elsie"
+    console.log(`${cb(name)},it is ${anyone} greeting `)
+}
+
+
+func2("kayyu",func1)
+func2("imiboy",func)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+file = open('andy.html',"r")
+    for each in file:
+        print(each)
+
+
+
+file = open("Andy.html", "r")
+    print(file.read())
+
+
+<!-- to read the first five characters -->
+
+file = open("Andy.html", "r")
+    print(file.read(5))
+
+
+
+<!-- let us learn how to write to a python file -->
+
+file = open("hack.txt", "w")
+    file.write("hello this is a text on how to hack")
+    file.write("i hope we arent scared its not that illegal")
+    file.close()
+
+
+
+<!-- i totally forgot to add something to the previous file so lets open it now and add to it -->
+ file = open("hack.txt", "a")
+    file.write("okay this is the line that i forgot to add")
+    file.close()
+
+
+
+<!-- with() command -->
+
+with open("hack.txt") as file:
+    file.write("hello i'm getting comfortable with the with command")
+    file.close()
+
+
+
+with open("hack.txt", "w") as f:
+    f.write("hello Mr and Mrs Andy")
+
+
+    <!-- this is a tast to access a file in someones computer and read data out of it for storage -->
+
+with open("hack.txt", "w") as file:
+    text = file.readLines()
+    for words in text:
+        word = words.split(" ")
+        print(word)
+    file.close()
